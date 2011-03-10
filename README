@@ -1,0 +1,3 @@
+after cloning the repo, you need to symlink the .vimrc in this repo to your ~/.vimrc
+
+ln -s ~/.vim/.vimrc ~/.vim
