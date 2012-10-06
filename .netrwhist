@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/etc/bash_completion.d'
+let g:netrw_dirhist_2='/etc'
+let g:netrw_dirhist_3='/home/mark'
+let g:netrw_dirhist_4='/home/mark/Sphinx/sphinx4-1.0beta6-src/sphinx4-1.0beta6/src/apps/edu/cmu/sphinx/demo/transcriber'
+let g:netrw_dirhist_5='/home/mark/Omphalos/delphi/vWj9k46'
