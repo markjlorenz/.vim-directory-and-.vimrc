@@ -30,16 +30,17 @@ let $pga = './vendor/plugins/pg_active_schema'
  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 
 "generate the ctags when a file is saved 
-au BufWritePost *.rb,*.erb,*.js,*.jade,*.haml silent! !ctags -w -R --exclude=.git --exclude=log --exclude=vendor --exclude=node_modules --exclude=public/lib* --exclude=.DS_Store &
+au BufWritePost *.rb,*.erb,*.js,*.jade,*.haml silent! !ctags -w -R --exclude=.git --exclude=log --exclude=vendor --exclude=node_modules --exclude=public/** --exclude=public/lib* --exclude=.DS_Store &
 
 "write js file from .coffee file on change
-au BufWritePost public/javascripts/*.coffee silent CoffeeMake! -b | cwindow | redraw!
-au BufWritePost app.coffee silent CoffeeMake! -b | cwindow | redraw!
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
 
 "for comandt
-let g:CommandTMatchWindowAtTop = 1
-map <Space> :CommandT<cr>
-map <silent> <Leader>t :CommandTFlush<CR>
+"let g:CommandTMatchWindowAtTop = 1
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+map <Space> :CtrlP<cr>
+"map <silent> <Leader>t :CommandTFlush<CR>
+
 
 set backup
 set backupdir=~/.vim/backup
